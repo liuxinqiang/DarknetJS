@@ -152,6 +152,8 @@ napi_value DetectImage(napi_env env, napi_callback_info info) {
 			FONT_HERSHEY_SIMPLEX, 1, Scalar(red, blue, green), 2);
 	}
 
+	namedWindow("Image", WINDOW_NORMAL);
+
 	imshow("Image", im);
 
 	free(srcImg);
