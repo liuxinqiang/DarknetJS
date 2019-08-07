@@ -92,7 +92,7 @@ napi_value DetectImage(napi_env env, napi_callback_info info) {
 	float hier_thresh = 0.5f;
 	float nms = 0.35f;
 
-	detection *dets = get_network_boxes(netMain, rgbImg.cols, rgbImg.rows, thresh, hier_thresh, nullptr, 1, &nboxes, 0);
+	detection *dets = get_network_boxes(netMain, rgbImg.cols, rgbImg.rows, thresh, hier_thresh, nullptr, 1, &nboxes, 1);
 
 	if (nms) {
 		do_nms_sort(dets, nboxes, metaSize, nms);
